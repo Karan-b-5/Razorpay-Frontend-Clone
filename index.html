@@ -9,14 +9,22 @@
 
     <style>
         .core-features-section{
-            background-size: 100% 100%;
-            padding-top: 12rem;
-            padding-bottom: 12rem;
+            /* background-size: 100% 100%; */
+            background-size: 2000px 100%;
+            padding-top: 20rem;
+            padding-bottom: 20rem;
         }
+        /* .featureSection2Bg{
+            /* background-size: 100%; */
+        /* } */
         .ctaSection{
             background-size: 100% 100%;
-            padding-top: 1rem;
-            padding-bottom: 6rem;
+            /* padding-top: 1rem; */
+            /* padding-bottom: 6rem; */
+        }
+
+        .ctaBg{
+            background-size: 200% 100%;
         }
 
         .companiesList{
@@ -53,17 +61,15 @@
 </head>
 <body>
     <!-- Nav Bar -->
-    <nav class=" bg-deepBlue">
-        <div class="relative w-[1080px] mx-auto flex items-center justify-between">
+    <nav class="bg-deepBlue ">
+        <div class="relative w-10/12 md:w-11/12 max-w-[1080px] mx-auto flex items-center justify-between">
             <!-- LOGO -->
-            <a href="/" class="py-7 pr-7 cursor-pointer">
-                <img src="./assets/logo.svg" width="125px" height="10px">
+            <a href="/" class="py-7 pr-7 cursor-pointer block">
+                <img src="./assets/logo.svg" width="125px" height="30px">
             </a>
-            <!-- Instead of taking 'ul' and making 'li' inside it, we can also take a 'outer-div' (acting as a ul to bind all innner-div) and make 'inner-div' inside it for each of the links (each inner div comprising of 'a' tag and another div for the underline on hover)-->
-            <ul class="flex gap-6">  <!-- instead of gap-6 we can also write space-x-6-->
+            <ul class="space-x-6 items-stretch pr-7 hidden lg:flex"> 
                 <li class="text-white font-mullish py-7 cursor-pointer hover:text-lightBlue transition-all duration-200 relative group">
                     <a href="#">Payments</a>
-                    <!-- We have psoitioned li as 'relative' , so now the below div will be absolutely positioned according to the li; it will take full width as of it's parent i.e 'li'; initially it will be hidden and on hovering it's group (i.e. the li tag) it will be visible -->
                     <div class="absolute bottom-0 w-full h-1  bg-lightBlue hidden group-hover:block transition-all duration-200"></div>
                 </li>
                 <li class="text-white font-mullish py-7 cursor-pointer hover:text-lightBlue transition-all duration-200 relative group">
@@ -88,21 +94,21 @@
                 </li>
             </ul>
 
-            <div class="flex gap-6">
-                <img src="./assets/india-flag.svg" width="28px" height="20px">
+            <div class="flex space-x-3 items-center">
+                <img src="./assets/india-flag.svg" width="28px" height="20px" class="hidden lg:block">
                 <button class="py-3 px-5 font-mullish text-white border-lightBlue border rounded-sm text-sm font-bold">Log In</button>
-                <button class="py-3 px-4 font-mullish border rounded-sm text-sm bg-white text-lightBlue300 transition-all duration-200 hover:text-lightBlue500 font-bold">Sign Up  <i class="fa-solid fa-arrow-right-long"></i></button>
+                <button class="py-3 px-4 font-mullish border rounded-sm text-sm bg-white text-lightBlue300 transition-all duration-200 hover:text-lightBlue500 font-bold hidden lg:flex">Sign Up  <i class="fa-solid fa-arrow-right-long"></i></button>
             </div>
         </div>
     </nav>
-
+    <!-- Nav Bar -->
+    
     <!-- Hero Section -->
-    <section class="relative bg-deepBlue">
+    <section class="relative" style="background: linear-gradient(45deg, #02042b, #02042b 50%)">
 
-        <!-- w=10/12 means 82-83% width and at max it will take 1080px width even if 83% of total is greater than this;  mx-auto means equal margin from left and right -->
-        <div class="w=10/12 max-w-[1080px] flex flex-row justify-between items-center mx-auto">
+        <div class="w-10/12 md:w-11/12 max-w-[1080px] mx-auto flex flex-col lg:flex-row justify-between items-center ">
             <!-- Left Part -->
-            <div class="space-y-6  py-20">
+            <div class="space-y-6">
                 <h1 class="text-white  font-mullish font-bold text-[40px] leading-1.2">To win customer trust, Razorpay is a must</h1>
                 <div class="w-6 h-1 bg-greenLight"></div>
                 <p class="font-mullish text-18px text-white leading-7 opacity-70">An RBI Authorised Payment Aggregator, we ensure your transactions are secure.</p>
@@ -114,26 +120,23 @@
         </div>
 
         <!-- Shape part -->
-        <!-- left-0 and right-0 both applied means to stretch fully towards both side -->
-        <div class="absolute left-0 right-0">
+        <div class="absolute left-0 right-0 top-[98%] w-full ">
             <img src="./assets/hero-shape.svg" alt="" class="w-[100%] object-fill">
         </div>
     </section>
+    <!-- Hero Section -->
 
     <!-- Features Section -->
     <section class="relative mt-[190px] overflow-hidden">
-        <!-- we hve ppositioned the below image in a way that it will move outside the box and will overflow so overflow:hidden will will make it's that part visible that is inside section -->
         <img src="./assets/feature-section1-dottedrows.png" alt="" loading="lazy"  width="233" height="167" class="absolute -top-[8rem] left-[10rem]">
-        <!-- loading="lazy" -  The image will not get loaded till it has not reached in our viewport while scrolling -->
         <img src="./assets/feature-section1-dottedrows.png" alt="" loading="lazy" width="233" height="167" class="absolute top-[3rem] right-0 rotate-180 inline-block -z-100">
 
         <div class="w-11/12 max-w-[1080px] mx-auto pt-4">
-            <h2 class="font-mullish font-bold text-center text-2xl leading[1.2]">Accept Payments with Razorpay Payment Suite</h2>
-            <!-- md:mb-20 to below div -->
+            <h2 class="font-mullish font-bold text-center text-2xl leading[1.2] hidden md:block">Accept Payments with Razorpay Payment Suite</h2>
+            <h2 class="font-mullish font-bold text-center text-5xl leading[1.2] md:hidden">Explore Razorpay Payment Suite</h2>
             <div class=" w-6 h-1 bg-greenLight mx-auto mt-4 mb-6 "></div>
 
             <!-- content Box -->
-            <!-- make it relative so we can img absolutely position according to it -->
             <div class="w-full min-h-[520px] bg-white flex rounded-md p-10 py-12 relative border">
                 <!-- left-section -->
                 <div class="flex flex-col justify-between w-full">
@@ -142,7 +145,6 @@
                     </h3>
                     <ul class="space-y-2">
                         <li class="font-mullish flex items-center space-x-2">
-                            <!-- we can also feather library (install it with npm i feather)to add the icon or can also add image (set its width too)-->
                             <i class="fa-solid fa-check" style="color: #63E6BE;"></i>
                             <span>100+ Payment Methods</span>
                         </li>
@@ -168,29 +170,21 @@
                         </li>
                     </ul>
 
-                    <!-- For button and hyperlink -->
-                    <div class="flex flex-row items-center space-x-4">
-                        <button class="bg-lightBlue text-white font-mullish rounded-md py-[14px] px-[18px] hover:bg-lightBlue500 transition-all duration-200">
-                            <!-- we can also add arrow using svg tag -->
+                    <div class="flex flex-col-reverse md:flex-row items-center space-x-4">
+                        <button class="bg-lightBlue text-white w-full md:w-fit font-mullish rounded-md py-[14px] px-[18px] hover:bg-lightBlue500 transition-all duration-200">
                             Sign Up Now <i class="fa-solid fa-arrow-right-long"></i>
                         </button>
-                        <!-- Hperlink -->
-                        <!-- Use below code can also work but we need to use feather library for icon 
-                            <div class="flex cursor-pointer group">
-                            <a href="#" class="font-mullish font-bold text-lightBlue500 group-hover:text-grayBlue transition-all duration-200">Know More</a>
-                            <i class="fa-solid fa-chevron-right" class="text-lightBlue500 group-hover:text-grayBlue transition-all duration-200"></i>
-                        </div> 
-                        -->
-                        <a href="#" class="font-mullish font-bold text-lightBlue500 hover:text-grayBlue transition-all duration-200">Know More <i class="fa-solid fa-chevron-right"></i></a>
+                    
+                        <a href="#" class="font-mullish font-bold text-lightBlue500 hover:text-grayBlue transition-all duration-200 self-start md:self-center">Know More <i class="fa-solid fa-chevron-right"></i></a>
                     </div>
                 </div>
 
                 <!--  -->
-                <img src="./assets/payment-suite.png" alt="" class="max-w-[600px] absolute right-0 bottom-0">
+                <img src="./assets/payment-suite.png" alt="" class="hidden md:block md:max-w-[400px] lg:max-w-[600px] absolute right-0 bottom-0">
             </div>
 
-                    <!-- Features-Boxes -->
-            <div class="w-full grid grid-cols-3 gap-4 mt-10" >
+            <!-- Features-Boxes -->
+            <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-10" >
                 <!-- Box - 1 -->
                 <div class="w-full min-h-[15rem] cursor-pointer relative">
                     <img src="./assets/payment-link-icon.svg" alt="" 
@@ -211,7 +205,6 @@
                     </svg>
 
                     <!-- Box- Content -->
-                    <!-- make it's z index higher than image icon and the svg as it needs to be displayed on top -->
                     <div style=":hover {box-shadow: 2px -5px 10px black}" class="z-[9] absolute w-full h-full flex flex-col justify-between pl-5 py-6 pr-8  hover:shadow-2xl">
                         <!-- Text Part -->
                         <div class="">
@@ -242,7 +235,6 @@
                     </svg>
 
                     <!-- Box- Content -->
-                    <!-- make it's z index higher than image icon and the svg as it needs to be displayed on top -->
                     <div class="z-[9] absolute w-full h-full flex flex-col justify-between pl-5 py-6 pr-8">
                         <!-- Text Part -->
                         <div class="">
@@ -273,7 +265,6 @@
                     </svg>
 
                     <!-- Box- Content -->
-                    <!-- make it's z index higher than image icon and the svg as it needs to be displayed on top -->
                     <div class="z-[9] absolute w-full h-full flex flex-col justify-between pl-5 py-6 pr-8">
                         <!-- Text Part -->
                         <div class="">
@@ -304,7 +295,6 @@
                     </svg>
 
                     <!-- Box- Content -->
-                    <!-- make it's z index higher than image icon and the svg as it needs to be displayed on top -->
                     <div class="z-[9] absolute w-full h-full flex flex-col justify-between pl-5 py-6 pr-8">
                         <!-- Text Part -->
                         <div class="">
@@ -335,7 +325,6 @@
                     </svg>
 
                     <!-- Box- Content -->
-                    <!-- make it's z index higher than image icon and the svg as it needs to be displayed on top -->
                     <div class="z-[9] absolute w-full h-full flex flex-col justify-between pl-5 py-6 pr-8">
                         <!-- Text Part -->
                         <div class="">
@@ -366,7 +355,6 @@
                     </svg>
 
                     <!-- Box- Content -->
-                    <!-- make it's z index higher than image icon and the svg as it needs to be displayed on top -->
                     <div class="z-[9] absolute w-full h-full flex flex-col justify-between pl-5 py-6 pr-8">
                         <!-- Text Part -->
                         <div class="">
@@ -382,29 +370,32 @@
         </div>
 
     </section>
+    <!-- Features Section -->
 
-
-    <!-- Feature Section - 2 -->
-    <!-- we may also choose not to use bg-no-repeat as image is big enough such that it will not repeat -->
-    
-    <section class=" bg-[url(./assets/feature-section-2BG.svg)] bg-no-repeat bg-cover pt-[10rem] md:pt-[16rem] pb-[180px] md:pb-[350px] mt-14" style="background-position: -400px 0px;">
+    <!-- Feature Section - 2 -->  
+    <section class=" bg-[url(./assets/feature-section-2BG.svg)] bg-no-repeat bg-cover featureSection2Bg pt-[10rem] md:pt-[16rem] pb-[180px] md:pb-[500px] mt-14" >
+        
         <div class="w-10/12 max-w-[1080px] mx-auto pt-4 relative">
-            <h2 class="font-mullish text-center text-2xl leading-[1.2] text-white font-bold">Explore Razorpay Business Banking</h2>
-            <div class="w-6 h-1 bg-greenLight mx-auto mt-4 mb-20"> </div>
+            <h2 class="hidden md:block font-mullish text-center text-2xl leading-[1.2] text-white font-bold">Explore Razorpay Business Banking</h2>
+            <div class="hidden md:block w-6 h-1 bg-greenLight mx-auto mt-4 mb-20"> </div>
+
+            <h2 class="inline-block md:hidden font-mullish text-[2.5rem] leading-[1.2] font-extrabold mx-auto text-white">
+                Explore
+                <img src="/assets/razorpayX.svg" width="168px" loading="lazy" height="32px" alt="razorpayX">
+                <span class="text-greenLight">Business Banking</span>
+                <div class="w-6 h-1 bg-greenLight mt-4 mb-20"> </div>
+            </h2>
 
             <!-- Main Feature Box -->
-            <!-- we can also avoid min-h-[440px] -->
             <div class="w-full min-h-[440px] flex border rounded-md relative border-grayText border-opacity-50">
-                <img src="./assets/x-flame-1.png" alt="" loading="lazy" class="absolute -top-[142px] -left-[140px] w-[200px]">
+                <img src="./assets/x-flame-1.png" alt="" loading="lazy" class=" -top-[220px] -scale-x-[1] rotate-180 md:scale-x-[1] md:rotate-0 -right-[30px] md:right-auto md:-top-[142px] md:-left-[140px] w-[180px] md:w-[200px] absolute z-10 ">
 
-                <img src="./assets/x-flame-2.png" alt="" loading="lazy" class="absolute top-[150px] -right-[180px] w-[270px]">
+                <img src="./assets/x-flame-2.png" alt="" loading="lazy" class="absolute hidden md:block top-[150px] -right-[70px] lg:-right-[85px] w-[270px]  z-10">
                 
                 <!-- Content Box -->
-                <!-- make it relative so we can img absolutely position according to it -->
-                <div class="w-full bg-[#181c2e] flex rounded-md p-10 py-12 relative">
+                <div class="w-full bg-[#181c2e] flex rounded-md p-10 py-12 relativ z-20">
                     <!-- left-section -->
                     <div class="flex flex-col justify-between items-start w-full h-full ">
-                        <!-- max w so that it doesn't goes into next line -->
                         <h3  class="max-w-[500px] font-mullish font-bold text-[28px] leading-10 text-white">
                             Manage your company’s finances with 
                             <img src="./assets/razorpayX.svg" alt="" class="inline-block">
@@ -412,7 +403,6 @@
                         </h3>
                         <ul class="space-y-2 my-6">
                             <li class="font-mullish flex items-center space-x-2">
-                                <!-- we can also feather library (install it with npm i feather)to add the icon or can also add image (set its width too)-->
                                 <i class="fa-solid fa-check" style="color: #63E6BE;"></i>
                                 <span class="text-white">Open a fully digital current account</span>
                             </li>
@@ -431,30 +421,26 @@
                         </ul>
 
                         <!-- For button and hyperlink -->
-                        <div class="w-full flex flex-row items-center space-x-4">
-                            <button class="bg-lightBlue text-white font-mullish font-bold rounded-md py-[14px] px-[18px] md:pr-[90px] hover:bg-lightBlue500 transition-all duration-200 flex items-center justify-start relative">
-                                <!-- we can also add arrow using svg tag -->
+                        <div class="w-full flex flex-col-reverse md:flex-row items-center space-x-4">
+                            <button class="bg-lightBlue text-white font-mullish font-bold rounded-md py-[14px] px-[18px] md:pr-[90px] hover:bg-lightBlue500 transition-all duration-200 flex items-center place-content-center md:justify-start relative self-stretch md:w-fit">
                                 Sign Up 
-                                <!-- The below div is for the green box -->
                                 <div class="w-12 h-[60px] bg-greenLight absolute right-6 skew-x-[20deg] flex justify-center items-center">
-                                    <!-- tilting arraow in opposite direction of it's parent div, so that it looks straight  -->
                                     <i class="fa-solid fa-arrow-right-long -skew-x-[20deg]"></i>
                                 </div>
                             </button>
                             <!-- Hperlink -->
-                            <a href="#" class="font-mullish font-bold text-lightBlue500 hover:text-grayBlue transition-all duration-200">Know More <i class="fa-solid fa-chevron-right"></i></a>
+                            <a href="#" class="font-mullish font-bold text-lightBlue500 hover:text-grayBlue transition-all duration-200 self-start md:self-center">Know More <i class="fa-solid fa-chevron-right"></i></a>
                         </div>
                     </div>
 
                      <!-- Right Side Image -->
                     <img src="/assets/buisness-banking.png" alt="payment suite" class="hidden min-h-[400px] md:block md:max-w-[400px] lg:max-w-[1000px] absolute right-0 lg:top-0 bottom-0 z-[5]">
-                    <!-- <img src="./assets/buisness-banking.png" alt="" class="max-w-[600px] absolute right-0 top-0 bottom-0"> -->
                 </div>
 
             </div>
 
             <!-- Individual Feature Boxes -->
-            <div class="w-full grid grid-cols-3 gap-4 my-14" >
+            <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 my-10" >
                 <!-- Box - 1 -->
                 <div class="w-full min-h-[15rem] cursor-pointer relative" style=":hover {box-shadow: 20px -15px 10px 10px lightBlue}">
                     <img src="./assets/current-icon.svg" alt="" 
@@ -475,7 +461,6 @@
                     </svg>
 
                     <!-- Box- Content -->
-                    <!-- make it's z index higher than image icon and the svg as it needs to be displayed on top -->
                     <div class="z-[9] absolute w-full h-full flex flex-col justify-between pl-5 py-6 pr-8  hover:shadow-2xl">
                         <!-- Text Part -->
                         <div class="">
@@ -506,7 +491,6 @@
                     </svg>
 
                     <!-- Box- Content -->
-                    <!-- make it's z index higher than image icon and the svg as it needs to be displayed on top -->
                     <div class="z-[9] absolute w-full h-full flex flex-col justify-between pl-5 py-6 pr-8">
                         <!-- Text Part -->
                         <div class="">
@@ -537,7 +521,6 @@
                     </svg>
 
                     <!-- Box- Content -->
-                    <!-- make it's z index higher than image icon and the svg as it needs to be displayed on top -->
                     <div class="z-[9] absolute w-full h-full flex flex-col justify-between pl-5 py-6 pr-8">
                         <!-- Text Part -->
                         <div class="">
@@ -551,34 +534,30 @@
             </div>
 
             <!-- Check Demo Section -->
-            <div class="w-full flex flex-row justify-between items-center border border-slate-700 mb-24 gap-y-6 relative rounded-md p-8 py-10">
-                <!-- instead of using mx-auto below, we can also do justify-evenly in above div -->
+            <div class="w-full justify-between items-center border border-slate-700 mb-24 gap-y-6 relative rounded-md p-8 py-10 hidden md:flex md:flex-col lg:flex-row">
                 <p class="mx-auto font-mullish text-white text-xl">Check out the live demo to learn how RazorpayX works. 
                     <span class="font-bold">No sign-up required !</span>
                 </p>
                 <button class="bg-lightBlue text-white font-mullish font-bold rounded-md py-[14px] px-[18px] md:pr-[90px] hover:bg-lightBlue500 transition-all duration-200 flex items-center justify-start relative">
-                    <!-- we can also add arrow using svg tag -->
                     Check out the demo 
-                    <!-- The below div is for the green box -->
                     <div class="w-12 h-[60px] bg-greenLight absolute right-6 skew-x-[20deg] flex justify-center items-center">
-                        <!-- tilting arraow in opposite direction of it's parent div, so that it looks straight  -->
                         <i class="fa-solid fa-arrow-right-long -skew-x-[20deg]"></i>
                     </div>
                 </button>
             </div>
         </div>
     </section>
+    <!-- Feature Section - 2 -->
 
     <!-- New Features -->
-    <section class="bg-white relative">
+    <section class="">
         <div class="relative w-11/12 max-w-[1080px] mx-auto pt-4">
-            <img src="./assets/feature-section1-dottedrows.png" alt="" class="absolute w-[233px] left-[300px] -top-[6rem]">
-            <img src="./assets/feature-section1-dottedrows.png" alt="" class="absolute w-[233px] -right-[3.5rem] -top-[6rem]">
+            <img src="./assets/feature-section1-dottedrows.png" alt="" class="hidden md:block absolute w-[233px] left-[300px] -top-[6rem] -z-10">
+            <img src="./assets/feature-section1-dottedrows.png" alt="" class="hidden md:block absolute w-[233px] -right-[2.5rem] -top-[6rem] -z-10">
 
             <!-- Card - Grid -->
-            <div class="w-full grid grid-cols-3 gap-y-10 gap-x-4 relative">
+            <div class="w-full grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-y-10 gap-x-4 relative">
                 <!-- Item 1 -->
-                <!-- It is transparent i.e. no bg color as the dotted image behind it is visible -->
                 <div class="flex items-center">
                     <h2 class="text-deepBlueHead font-mullish font-extrabold text-4xl leading-[3.375rem]">
                         New in the <span class="text-lightBlue500">Razorpay</span> Product Suite
@@ -587,7 +566,6 @@
                  
                 <!-- Card - 1 -->
                 <div style="box-shadow:2px 4px 9px 1px hsla(0, 0%, 0%, 0.05);"  class="p-10 bg-[url(./assets/instant-settlement-bg.svg)] w-full max-h-[300px] cursor-pointer bg-no-repeat hover:scale-105 transition-all duration-200 hover:bg-[url(./assets/instant-settlement-bghover.svg)] bg-white">
-                    <!-- the image in the bg of card is initial a image with only outline of the figure an hoveringanother image of same figure appears but with color filled -->
                     <img src="./assets/razorpayXicon.svg" alt="" class="w-10 h-10">
                     <h3 class="font-mullish text-lg font-bold pt-4">UPI AutoPay</h3>
                     <p class="font-mullish py-3 text-grayText leading-normal">Allow customers to set up recurring payments using UPI Apps.</p>
@@ -595,7 +573,6 @@
                 </div>
                 <!-- Card - 2-->
                 <div class="p-10 bg-[url(./assets/upi-autopay-bg.svg)] w-full max-h-[300px] cursor-pointer bg-no-repeat hover:scale-105 transition-all duration-200 hover:bg-[url(./assets/upi-autopay-hoverbg.svg)] bg-white">
-                    <!-- the image in the bg of card is initial a image with only outline of the figure an hoveringanother image of same figure appears but with color filled -->
                     <img src="./assets/autopay-icon.svg" alt="" class="w-10 h-10 bg-lightBlue rounded-full">
                     <h3 class="font-mullish text-lg font-bold pt-4">Magic Checkout</h3>
                     <p class="font-mullish py-3 text-grayText leading-normal">Improve your order conversion rates & reduce return-to-origins. Boost your business by 20%</p>
@@ -603,7 +580,6 @@
                 </div>
                 <!-- Card - 3 -->
                 <div class="p-10 bg-[url(./assets/magic-checkout-bg.svg)] w-full max-h-[300px] cursor-pointer bg-no-repeat hover:scale-105 transition-all duration-200 hover:bg-[url(./assets/magic-checkout-hoverbg.svg)] bg-white">
-                    <!-- the image in the bg of card is initial a image with only outline of the figure an hoveringanother image of same figure appears but with color filled -->
                     <img src="./assets/magic-checkout.svg" alt="" class="w-10 h-10">
                     <h3 class="font-mullish text-lg font-bold pt-4">Payment Buttons</h3>
                     <p class="font-mullish py-3 text-grayText leading-normal">Accept payments on your website, in less than 5 minutes. No developer needed. </p>
@@ -611,7 +587,6 @@
                 </div>
                 <!-- Card - 4 -->
                 <div class="p-10 bg-[url(./assets/payment-button-bg.svg)] w-full max-h-[300px] cursor-pointer bg-no-repeat hover:scale-105 transition-all duration-200 hover:bg-[url(./assets/payment-button-hoverbg.svg)] bg-white">
-                    <!-- the image in the bg of card is initial a image with only outline of the figure an hoveringanother image of same figure appears but with color filled -->
                     <img src="./assets/payment-button.svg" alt="" class="w-10 h-10 bg-lightBlue rounded-full">
                     <h3 class="font-mullish text-lg font-bold pt-4">Payment Button</h3>
                     <p class="font-mullish py-3 text-grayText leading-normal">Accept payments on your website, in less than 5 minutes. No developer needed.</p>
@@ -619,7 +594,6 @@
                 </div>
                 <!-- Card - 5 -->
                 <div class="p-10 bg-[url(./assets/instantsettlement-bg.svg)] w-full max-h-[300px] cursor-pointer bg-no-repeat hover:scale-105 transition-all duration-200 hover:bg-[url(./assets/instantsettlement-hoverbg.svg)] bg-white">
-                    <!-- the image in the bg of card is initial a image with only outline of the figure an hoveringanother image of same figure appears but with color filled -->
                     <img src="./assets/instant-settlement-icon.svg" alt="" class="w-10 h-10 bg-lightBlue rounded-full">
                     <h3 class="font-mullish text-lg font-bold pt-4">Payment Button</h3>
                     <p class="font-mullish py-3 text-grayText leading-normal">Accept payments on your website, in less than 5 minutes. No developer needed.</p>
@@ -629,18 +603,18 @@
             </div>
         </div>
     </section>
+    <!-- New Features -->
 
 
     <!-- Core Features -->
-    <section class="w-full bg-[url(./assets/core-features-sectionBg.svg)] bg-no-repeat bg-cover mt-14 relative
-                    core-features-section">
-        <div class="relative w-11/12 max-w-[1080px] mx-auto pt-4">
+    <section class="w-full bg-[url(./assets/core-features-sectionBg.svg)] bg-no-repeat bg-center bg-cover mt-14 relative core-features-section ">
+        <div class="relative w-11/12 max-w-[1080px] mx-auto pt-8 md:pt-4">
             <h2 class="font-mullish font-bold text-2xl text-center text-white">Features</h2>
             <div class="w-6 h-1 bg-greenLight mx-auto mt-4 mb-6"></div>
             <p class="font-mullish max-w-[450px] text-center text-white mx-auto">Empower your business with all the right tools to accept online payments and provide the best customer experience</p>
 
             <!-- Card - Grid -->
-            <div class="grid grid-cols-4 gap-[2rem] mt-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-[2rem] mt-8">
                 <!-- Card - 1 -->
                 <div class="">
                     <img src="./assets/instant-activation-icon.svg" alt="">
@@ -693,14 +667,14 @@
             </div>
         </div>
     </section>
+    <!-- Core Features -->
 
 
     <!-- Join Razorpay Section -->
     <section class="bg-[#f5f8fe] relative pt-40 pb-12 -mt-[200px] -z-[100]">
-        <div class="w-11/12 max-w-[1080px] mx-auto relative flex flex-row">
+        <div class="w-10/12 md:w-11/12 max-w-[1080px] mx-auto relative pt-4 md:flex md:justify-center md:items-center">
             <!-- Left Part -->
-            <!-- will assign the space remaining after removing the space needed by image -->
-            <div class="w-[calc(100%-500px)] flex flex-col justify-center">
+            <div class="md:w-[calc(100%-500px)] lg:mt-0 mt-14 md:flex-col md:justify-center lg:flex-row">
                 <h2 class="font-mullish font-extrabold text-2xl text-deepBlueHead">Join the 50,00,000+ businesses using Razorpay</h2>
                 <div class="w-6 h-1 bg-greenLight my-4 mb-10"></div>
                 <p class="font-mullish ">We make it easier for you to focus on building great products while we work on simplifying your payments. Become one of us by joining thousands of our happy users and simplify the online payment experience for your customers.</p>
@@ -708,62 +682,59 @@
             </div>
 
             <!-- Right Part -->
-            <div class="h-[500px] w-[500px] relative overflow-y-hidden">
+            <div class="h-[500px] md:w-[500px] mt-24 md:mt-0 relative overflow-y-hidden ">
                 <div style="background: linear-gradient(180deg, #f4f8ff, #fff0);" class="absolute w-full h-[150px] top-0 z-50"></div>
                 <img src="./assets/comanies.png" alt="" width="500px" class="absolute w-full h-auto object-cover companiesList">
                 <div style="background: linear-gradient(0deg, #f4f8ff, #fff0);" class="absolute w-full h-[150px] bottom-0 z-50"></div>
             </div>
         </div>
     </section>
+    <!-- Join Razorpay Section -->
 
 
     <!-- Testimonial Session  -->
     <section class="relative">
         <div class="w-11/12 max-w-[1300px] mx-auto relative py-20">
             <img src="./assets/feature-section1-dottedrows.png" alt=""
-                class="absolute w-[200px] top-[8rem] left-[2rem]">
+                class="absolute w-[200px] top-[8rem] left-[2rem] hidden md:block">
             <h2 class="font-mullish font-extrabold text-2xl text-deepBlueHead text-center">An Experience  
                 <br>    People Love to Talk About
             </h2>
             <div class="w-6 h-1 bg-greenLight mx-auto my-4"></div>
 
             <!-- Left button -->
-            <!-- Instead of the button below we could have also used a 'div' tag -->
-            <button class="w-[100px] h-[100px] bg-[#f4f8ff] rounded-full absolute left-0 top-1/2 flex justify-center items-center">
-                <!-- We don't have to absolutely position the below div as it's a child of the button and it's a flex and we are already making it's content place in the center-->
-                <div class="w-[65%] h-[65%] rounded-full bg-[#f4f8ff] flex justify-center items-center mix-blend-multiply">
+            <button class="w-[36px] h-[36px] md:w-[96px] md:h-[96px] bg-[#f4f8ff] rounded-full absolute left-0 top-1/2 -translate-y-1/2 grid place-items-center">
+                <div class="w-[65%] h-[65%] bg-[#f4f8ff] mix-blend-multiply rounded-full grid place-items-center">
                     <i class="fa-solid fa-angle-left fa-2xl"></i>
                 </div>
             </button>
 
             <!-- Right button -->
-            <button class="w-[100px] h-[100px] bg-[#f4f8ff] rounded-full absolute right-0 top-1/2 flex justify-center items-center">
-                <!-- We don't have to absolutely position the below div as it's a child of the button and it's a flex and we are already making it's content place in the center-->
+            <button class="w-[36px] h-[36px] md:w-[96px] md:h-[96px] bg-[#f4f8ff] rounded-full absolute right-0 top-1/2 -translate-y-1/2 grid place-items-center">
                 <div class="w-[65%] h-[65%] rounded-full bg-[#f4f8ff] flex justify-center items-center mix-blend-multiply">
                     <i class="fa-solid fa-angle-right fa-2xl"></i>
                 </div>
             </button>
 
             <!-- Main Content -->
-            <div class="flex flex-row max-w-[960px] items-center mx-auto my-20 space-x-[10rem]">
+            <div class="flex flex-col xl:flex-row max-w-[960px] items-center mx-auto my-20 xl:space-x-[10rem]">
                 <!-- Left image -->
                 <img src="./assets/testimonial.jpg" alt=""
-                    class="h-[320px] w-[320px] rounded-xl">
+                    class="w-[250px] h-[250px] md:w-[320px] md:h-[320px] rounded-xl">
 
                 <!-- Right Part -->
-                <div class="max-w-[400px]">
-                    <img src="./assets/quotes.svg" alt="" class="w-[35px] h-[40px] -mb-2">
-                    <p class="font-mullish text-3xl font-extralight">Readymade Closed Wallet Solution For Quick Refunds</p>
-                    <a href="#" class="text-grayText italic underline">Learn More</a>
-                    <h3 class="font-mullish font-extrabold text-2xl">Lorem Ipsum</h3>
-                    <p class="font-mullish font-medium">CEO, XYZ Engineering Company</p>
-                    <img src="./assets/fake-company-logo.png" alt="" width="80px" height="40px">
+                <div class="xl:max-w-[400px] max-w-[300px] mt-4 xl:mt-0 flex flex-col mx-auto xl:text-left text-center">
+                    <img src="./assets/quotes.svg" alt="" class="w-[35px] h-[40px] -mb-2 xl:order-1">
+                    <p class="font-mullish text-3xl font-extralight xl:order-1 max-w-[300px] xl:max-w-full">Readymade Closed Wallet Solution For Quick Refunds</p>
+                    <a href="#" class="text-grayText italic underline xl:order-1">Learn More</a>
+                    <h3 class="font-mullish font-extrabold text-2xl -order-1">Lorem Ipsum</h3>
+                    <p class="font-mullish font-medium -order-1 xl:order-1 my-2 xl:my-0">CEO, XYZ Engineering Company</p>
+                    <img src="./assets/fake-company-logo.png" alt="" width="80px" height="40px" class="mx-auto xl:mx-0 -order-1 xl:order-1">
                 </div>
             </div>
 
             <!-- 6 Dot wala div -->
             <div class="w-full flex flex-row mx-auto space-x-2 justify-center">  <!-- We can also give this a max-width -->
-                <!-- We can also use radio button or use a button which is fully rounded -->
                 <!-- dot - 1 -->
                 <div class="h-[10px] w-[10px] bg-gray-300 rounded-full"></div>
                 <!-- dot - 2 -->
@@ -779,14 +750,17 @@
             </div>
         </div>
     </section>
+    <!-- Testimonial Session  -->
 
 
     <!-- CTA -->
-    <section class="bg-[url(./assets/CTABg.svg)] w-full h-full bg-center bg-no-repeat bg-cover relative ctaSection">
+    <section class="ctaSection relative flex items-center z-[100] min-h-[880px]">
+        <div class="bg-[url(/assets/CTABg.svg)] ctaBg bg-center w-full h-full absolute -z-[1]"></div>
         <!-- Main Content -->
-        <div class="w-11/12 max-w-[1080px] flex flex-row items-center justify-between mx-auto space-x-8 my-8 relative">
+        <div class="w-10/12 my-10 md:my-0 md:w-11/12 max-w-[1080px] h-full mx-auto relative flex items-center space-x-20 justify-between">
             <!-- Left Side Content -->
-            <div class="mt-16">
+            <!-- <div class="mt-16"> -->
+            <div>
                 <h2 class="font-mullish font-extrabold text-2xl text-white">Supercharge your business with Razorpay</h2>
                 <div class="w-6 h-1 bg-greenLight my-4"></div>
                 <p class="font-mullish text-white max-w-[440px]">Sign up now to experience the future of payments and offer your customers the best checkout experience.</p>
@@ -812,17 +786,18 @@
             </div>
 
             <!-- Right Side image -->
-            <img src="./assets/ctaImg.svg" alt="" width="240px" height="282px" loading="lazy" class=" pt-14 mt-8">
+            <img src="./assets/ctaImg.svg" alt="" width="240px" height="282px" loading="lazy" class="hidden lg:block pt-14 mt-8">
         </div>
     </section>
+    <!-- CTA -->
 
     <!-- Footer -->
     <footer style="background: linear-gradient(to right, #eef9fe, #edf7ff);" class="-mt-[400px]">
         <!-- Content box -->
-        <div class="w-10/12 max-w-[1080px] mx-auto pt-[400px] pb-10 flex flex-row justify-between space-y-0 space-x-4">
+        <div class="w-10/12 max-w-[1080px] mx-auto pt-[400px] pb-10 flex flex-col md:flex-row justify-between space-y-0 space-x-4">
 
             <!-- Column - 1 -->
-            <div class="flex flex-col max-w-[260px]">
+            <div class="flex flex-col md:max-w-[340px] lg:max-w-[260px]">
                 <img src="./assets/logo-dark.svg" alt="" width="120px" height="24px">
                 <p class="font-mullish text-sm text-grayText my-3">Razorpay is the only payments solution in India that allows businesses to accept, process and disburse payments with its product suite. It gives you access to all payment modes including credit card, debit card, netbanking, UPI and popular wallets including JioMoney, Mobikwik, Airtel Money, FreeCharge, Ola Money and PayZapp.</p>
                 <p class="font-mullish text-sm text-grayText my-3">RazorpayX supercharges your business banking experience, bringing effectiveness, efficiency, and excellence to all financial processes. With RazorpayX, businesses can get access to fully-functional current accounts, supercharge their payouts and automate payroll compliance.</p>
@@ -842,7 +817,7 @@
             </div>
 
             <!-- Column - 2 -->
-            <div class="flex flex-row space-x-4  justify-between">
+            <div class="flex flex-col space-y-4 md:space-y-4 md:flex-row md:space-x-4  justify-between">
                 <!-- Sub - Column 1 -->
                 <div class="space-y-3">
                     <div>
@@ -1102,16 +1077,20 @@
                     </div>
                     <div>
                         <p class="font-mullish uppercase font-bold text-gray2 mb-1 mt-6">REGD. OFFICE ADDRESS</p>
-                        <p >
-                            <pre class="font-mullish text-sm mt-4">
-                                Razorpay Software Private Limited,
-                                1st Floor, SJR Cyber,
-                                22 Laskar Hosur Road, Adugodi,
-                                Bengaluru, 560030,
-                                Karnataka, India
-                                CIN: U72200KA2013PTC097389
-                            </pre>
-                        </p>
+                        <p class="font-mullish text-sm mt-4 whitespace-nowrap">
+                            Razorpay Software Private Limited, 
+                            <br>
+                            1st Floor, SJR Cyber,
+                            <br>
+                            22 Laskar Hosur Road, Adugodi, 
+                            <br>
+                            Bengaluru, 560030,
+                            <br>
+                            Karnataka, India 
+                            <br>
+                            CIN: U72200KA2013PTC097389
+                          </p>
+    
                         <div class="font-mullish mt-6 text-sm">
                             <p>© Razorpay 2022</p>
                             <p>All Rights Reserved</p>
@@ -1122,8 +1101,10 @@
             </div>
         </div>
     </footer>
+    <!-- Footer -->
+
 
     <!-- For Fonts -->
     <script src="https://kit.fontawesome.com/292dd8e6aa.js" crossorigin="anonymous"></script>
 </body>
-</html>
+</html>   
