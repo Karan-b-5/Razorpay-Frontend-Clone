@@ -31,9 +31,9 @@
     
 2.  **Navigate to the project directory:**
     
-    Since the project files are in the root directory, you can skip this step.
-
-
+    ```plaintext
+    cd Razorpay-Frontend-Clone
+    ```
     
 3.  **Install the dependencies:**
     
@@ -46,10 +46,10 @@
 
 *   To start the project, run the following command:
     *   ```plaintext
-        npm run dev
+        npm start
         ```
         
-*   This will start a development server and you can view the project in your browser at `http://localhost:3000`.
+*   This will start a development server and you can view the project in your browser at `http://localhost:5173`.
 
 ## Contributing
 
