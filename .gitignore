@@ -1,0 +1,35 @@
+# Node modules directory
+node_modules/
+
+# Tailwind CSS build output
+public/css/
+
+# Build directories
+dist/
+build/
+
+# Temporary files
+*.log
+*.tmp
+
+# Dependency directories
+.DS_Store
+
+# Environment variable files
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# IDE files
+.vscode/
+.idea/
+
+# NPM debug log files
+npm-debug.log*
+
+# Lockfiles
+package-lock.json
+yarn.lock
+.pnpm-lock.yaml
